@@ -16,20 +16,19 @@ Następnie możemy ich użyć w kontrolerze jako reguły tras:
 
 ~~~ csharp
 
-[ApiController]
-    [Route("api/[controller]")]
-    public class CustomersController : ControllerBase
+[Route("api/[controller]")]
+public class CustomersController : ControllerBase
+{
+    [HttpGet("{number:pesel}")]
+    public IActionResult GetByPesel(string number)
     {
-        [HttpGet("{number:pesel}")]
-        public IActionResult GetByPesel(string number)
-        {
-            return Ok($"Pesel {number}");
-        }
+        return Ok($"Pesel {number}");
+    }
 
-        [HttpGet("{number:nip}")]
-        public IActionResult GetByNip(string number)
-        {
-            return Ok($"Nip {number}");
-        }
+    [HttpGet("{number:nip}")]
+    public IActionResult GetByNip(string number)
+    {
+        return Ok($"Nip {number}");
+    }
 ~~~
 
