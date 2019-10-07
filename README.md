@@ -1,6 +1,4 @@
-# dotnet-core-routecontraint-polish-validators
-
-Reguły do walidacji tras na podstawie sumy kontrolnej NIP lub Pesel
+# Reguły do walidacji tras na podstawie sumy kontrolnej NIP oraz Pesel
 
 
 - Rejestracja
