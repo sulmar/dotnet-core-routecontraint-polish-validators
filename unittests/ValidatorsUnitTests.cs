@@ -56,5 +56,21 @@ namespace unittests
              Assert.Throws<FormatException>(() => validator.IsValid("5012403718"));
              Assert.Throws<FormatException>(() => validator.IsValid("AAA12403718"));
         }
+
+
+        //[Theory]
+        //[InlineData("730295378", true)]
+        //[InlineData("121497515", true)]
+        //[InlineData("015724597", true)]
+        
+        //public void RegonValidatorTest(string number, bool expected)
+        //{
+        //    IValidator validator = new RegonValidator();
+
+        //    bool result = validator.IsValid(number);
+
+        //    Assert.Equal(expected, result);
+
+        //}
     }
 }
