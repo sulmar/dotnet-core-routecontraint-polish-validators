@@ -52,13 +52,20 @@ namespace webapi
 
     public static class ConstraintExtensions
     {
+        public static IServiceCollection AddPeselValidator(this IServiceCollection services)
+        {
+            return services.Configure<RouteOptions>(options => options.ConstraintMap.Add("pesel", typeof(PeselRouteConstraint)));
+        }
+
+        public static IServiceCollection AddNipValidator(this IServiceCollection services)
+        {
+            return services.Configure<RouteOptions>(options => options.ConstraintMap.Add("nip", typeof(NipRouteConstraint)));
+        }
+
         public static IServiceCollection AddValidators(this IServiceCollection services)
         {
-            services.Configure<RouteOptions>(options =>
-            {
-                options.ConstraintMap.Add("pesel", typeof(PeselRouteConstraint));
-                options.ConstraintMap.Add("nip", typeof(NipRouteConstraint));
-            });
+            services.AddPeselValidator();
+            services.AddNipValidator();
 
             return services;
         }
