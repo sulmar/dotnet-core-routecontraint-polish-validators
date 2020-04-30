@@ -1,6 +1,9 @@
-# Polish RouteContraint Validators for .NET Core
+# Polish Route Contraints Validators for MVC or RazorPages
+Route constraints for Polish NIP, PESEL, REGON
 
 ## Get Started
+
+- Registration of the PESEL route constraint
 
 ~~~ csharp
 public void ConfigureServices(IServiceCollection services)
@@ -9,7 +12,8 @@ public void ConfigureServices(IServiceCollection services)
 }
 ~~~
 
-or 
+- Registration of the NIP route constraint
+
 ~~~ csharp
 public void ConfigureServices(IServiceCollection services)
 {
@@ -17,7 +21,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ~~~
 
-or all
+- Registration of the NIP and PESEL route constraints
             
 ~~~ csharp
 public void ConfigureServices(IServiceCollection services)
