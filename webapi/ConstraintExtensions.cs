@@ -2,13 +2,14 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.AspNetCore.Http;
-using validators;
+using Validators.Abstractions;
+using Validators.Polish;
 
 namespace webapi
 {
     public class NipRouteConstraint : ValidatorRouteContraint
     {
-        public NipRouteConstraint() : base(new NIPValidator())
+        public NipRouteConstraint() : base(new NipValidator())
         {
         }
     }
