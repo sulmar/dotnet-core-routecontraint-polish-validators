@@ -1,8 +1,24 @@
-# Reguły do walidacji tras na podstawie sumy kontrolnej NIP oraz Pesel
+# Polish RouteContraint Validators for .NET Core
 
+## Get Started
 
-- Rejestracja
+~~~ csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddPeselValidator();
+}
+~~~
 
+or 
+~~~ csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddNipValidator();
+}
+~~~
+
+or all
+            
 ~~~ csharp
 public void ConfigureServices(IServiceCollection services)
 {
@@ -10,9 +26,8 @@ public void ConfigureServices(IServiceCollection services)
 }
 ~~~
 
-Powyższa metoda rejestruje reguły _pesel_ oraz _nip_
 
-Następnie możemy ich użyć w kontrolerze jako reguły tras:
+## Usage
 
 ~~~ csharp
 
