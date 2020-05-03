@@ -33,6 +33,8 @@ public void ConfigureServices(IServiceCollection services)
 
 ## Usage
 
+### MVC Controller
+
 ~~~ csharp
 
 [Route("api/[controller]")]
@@ -51,3 +53,7 @@ public class CustomersController : ControllerBase
     }
 ~~~
 
+### Razor Pages
+~~~ html
+@page "/customers/{number:pesel}"
+~~~
